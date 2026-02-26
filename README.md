@@ -50,6 +50,7 @@ This system accepts PDF financial documents (e.g., Tesla's Q2 2025 quarterly rep
 | 19 | `requirements.txt` | Missing `python-multipart` — FastAPI file uploads fail | Added `python-multipart` |
 | 20 | `requirements.txt` | Missing `litellm` — required by `crewai.LLM` | Added `litellm` |
 | 21 | `README.md` | `pip install -r requirement.txt` — filename typo | Fixed to `requirements.txt` |
+| 22 | `task.py` | `{file_path}` not injected into task descriptions | Added `{file_path}` to all tasks to ensure agents read the correct file | [diff_block_end]
 
 ### Inefficient / Sabotaged Prompts
 

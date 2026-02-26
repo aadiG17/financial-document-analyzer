@@ -7,7 +7,7 @@ from tools import search_tool, read_data_tool
 ## Task to verify the uploaded document is a valid financial document
 verification = Task(
     description=(
-        "Read the financial document at the provided file path using the read_data_tool.\n"
+        "Read the financial document located at: {file_path} using the read_data_tool.\n"
         "Verify that it is a legitimate financial document (e.g., quarterly report, annual report, "
         "earnings release, financial statement).\n"
         "Identify and extract:\n"
@@ -33,7 +33,7 @@ verification = Task(
 ## Task to analyze the financial document based on user query
 analyze_financial_document = Task(
     description=(
-        "Analyze the financial document thoroughly to address the user's query: {query}\n"
+        "Analyze the financial document at {file_path} thoroughly to address the user's query: {query}\n"
         "Use the read_data_tool to extract data from the document.\n"
         "Focus on:\n"
         "- Key financial metrics (revenue, net income, EPS, margins, cash flow)\n"
@@ -58,7 +58,7 @@ analyze_financial_document = Task(
 ## Task for investment analysis
 investment_analysis = Task(
     description=(
-        "Based on the financial analysis, provide investment recommendations for the user's query: {query}\n"
+        "Based on the financial analysis of the document at {file_path}, provide investment recommendations for the user's query: {query}\n"
         "Consider:\n"
         "- Valuation metrics (P/E, P/B, EV/EBITDA) relative to industry peers\n"
         "- Growth trajectory and sustainability of earnings\n"
@@ -82,7 +82,7 @@ investment_analysis = Task(
 ## Task for risk assessment
 risk_assessment = Task(
     description=(
-        "Conduct a comprehensive risk assessment based on the financial document.\n"
+        "Conduct a comprehensive risk assessment based on the financial document at {file_path}.\n"
         "Address the user's query: {query}\n"
         "Evaluate:\n"
         "- Financial risks (leverage, liquidity, solvency ratios)\n"
